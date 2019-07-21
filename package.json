@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hank-frank/portfolio.git"
+  },
+  "author": "Henry Frank <henryfrank@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hank-frank/portfolio/issues"
+  },
+  "homepage": "https://github.com/hank-frank/portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  }
+}
