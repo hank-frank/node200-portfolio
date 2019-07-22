@@ -1,42 +1,199 @@
-$primary-color: #222112;
+$grey1: #29292D;
+$grey2: #47474A;
+$grey3: #A2A3A7;
+$grey4: #E1E2E5;
+$red: #F04F23;
+$font1: 'Raleway', sans-serif;
+$font2: 'Roboto Slab', serif;
+
+
 
 body {
-    color: $primary-color;
+    color: $grey4;
+    margin: 0;
+    background-color: white;
 }
 
 .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: $grey1;
     position: relative;
+    font-family: $font1;
+    font-size: 40px;
+  }
+
+  #nameIcon {
+    border: 2px solid $red;
+    background-color: $grey3;
+    color: $red; 
+    font-family: $font1;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    font-size: 30px;
+    padding-bottom:10px;
   }
   
   .topnav #myLinks {
     display: none;
+    text-align: center;
+    font-family: $font1;
   }
   
   .topnav a {
-    color: white;
+    color: $red;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
     display: block;
   }
   
   .topnav a.icon {
-    background: black;
+    background: $grey1;
     display: block;
     position: absolute;
     right: 0;
     top: 0;
+    height: 100%;
   }
   
   .topnav a:hover {
     background-color: #ddd;
-    color: black;
+    color: $red;
   }
   
   .active {
-    background-color: #4CAF50;
-    color: white;
+    background-color: $grey3;
+    color: $red;
   }
+
+  #navContact {
+    color: $red;
+    font-family: $font2;
+    font-size: 10px;
+  }
+
+  .introText {
+    margin: auto;
+    width: 80%;
+    padding: 25px, 20px;
+    font-family: $font1;
+    color: $grey1;
+    text-align: center;
+  }
+
+  #henry {
+    color: $red;
+  }
+
+  .projects{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 30px;
+
+  }
+
+  .eachProject {
+    width: 160;
+    height: 220;
+    border-radius: 20px;
+    background-color: $grey2;
+    margin: 80px 10px;
+    // margin-bottom: 50px;
+  }
+
+  .projectIcon {
+    width: 95;
+    height: 95;
+    border-radius: 50%;
+    background-color: white;
+    margin: auto;
+    margin-top: 60px;
+  }
+
+  .projectText {
+    font-family: $font1;
+    color: $red;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .projectView {
+    overflow: auto;
+    background-color: $grey2;
+    display: none;
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #mortgageProjectToggle {
+    display: none;
+  }
+  #changeProjectToggle {
+    display: none;
+  }
+  #flightProjectToggle {
+    display: none;
+  }
+  #todoProjectToggle {
+    display: none;
+  }
+  #topProjectToggle {
+    display: none;
+  }
+
+  .centering {
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  #projectTitle {
+    font-family: $font1;
+    font-size: 40px;
+    margin-top: auto;
+    margin-left:8%;
+    padding-bottom: 50px;
+  }
+  
+  .projectDescription {
+    font-family: $font2;
+    font-size: 14px;
+    // position: relative;
+    margin-left: 8%;
+    padding: auto;
+    // padding-top: 50px;
+  }
+
+  .projectButton {
+    font-family: $font1;
+    font-size: 14px;
+    text-align: center;
+    color: $red;
+    background-color: white;
+    // position: relative;
+    margin-left: 8%;
+    margin-top: auto;
+    height: 60px;
+    width: 150px;
+    border-radius: 20px;
+  }
+
+  .bottomInfo {
+    background-color: $grey4;
+    color: $red;
+    width: 100%;
+    font-family: $font1;
+  }
+
+
 

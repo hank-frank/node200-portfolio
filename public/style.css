@@ -1,34 +1,161 @@
 body {
-  color: #222112; }
+  color: #E1E2E5;
+  margin: 0;
+  background-color: white; }
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
-  position: relative; }
+  background-color: #29292D;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px; }
+
+#nameIcon {
+  border: 2px solid #F04F23;
+  background-color: #A2A3A7;
+  color: #F04F23;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  font-size: 30px;
+  padding-bottom: 10px; }
 
 .topnav #myLinks {
-  display: none; }
+  display: none;
+  text-align: center;
+  font-family: "Raleway", sans-serif; }
 
 .topnav a {
-  color: white;
+  color: #F04F23;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
   display: block; }
 
 .topnav a.icon {
-  background: black;
+  background: #29292D;
   display: block;
   position: absolute;
   right: 0;
-  top: 0; }
+  top: 0;
+  height: 100%; }
 
 .topnav a:hover {
   background-color: #ddd;
-  color: black; }
+  color: #F04F23; }
 
 .active {
-  background-color: #4CAF50;
-  color: white; }
+  background-color: #A2A3A7;
+  color: #F04F23; }
+
+#navContact {
+  color: #F04F23;
+  font-family: "Roboto Slab", serif;
+  font-size: 10px; }
+
+.introText {
+  margin: auto;
+  width: 80%;
+  padding: 25px, 20px;
+  font-family: "Raleway", sans-serif;
+  color: #29292D;
+  text-align: center; }
+
+#henry {
+  color: #F04F23; }
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 30px; }
+
+.eachProject {
+  width: 160;
+  height: 220;
+  border-radius: 20px;
+  background-color: #47474A;
+  margin: 80px 10px; }
+
+.projectIcon {
+  width: 95;
+  height: 95;
+  border-radius: 50%;
+  background-color: white;
+  margin: auto;
+  margin-top: 60px; }
+
+.projectText {
+  font-family: "Raleway", sans-serif;
+  color: #F04F23;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 30px; }
+
+.projectView {
+  overflow: auto;
+  background-color: #47474A;
+  display: none;
+  min-height: 400px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center; }
+
+#mortgageProjectToggle {
+  display: none; }
+
+#changeProjectToggle {
+  display: none; }
+
+#flightProjectToggle {
+  display: none; }
+
+#todoProjectToggle {
+  display: none; }
+
+#topProjectToggle {
+  display: none; }
+
+.centering {
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+
+#projectTitle {
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  margin-top: auto;
+  margin-left: 8%;
+  padding-bottom: 50px; }
+
+.projectDescription {
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  margin-left: 8%;
+  padding: auto; }
+
+.projectButton {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #F04F23;
+  background-color: white;
+  margin-left: 8%;
+  margin-top: auto;
+  height: 60px;
+  width: 150px;
+  border-radius: 20px; }
+
+.bottomInfo {
+  background-color: #E1E2E5;
+  color: #F04F23;
+  width: 100%;
+  font-family: "Raleway", sans-serif; }
 
 /*# sourceMappingURL=style.css.map */
