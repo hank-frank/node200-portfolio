@@ -1,10 +1,23 @@
 <html>
     <head>
         <title> Henry's Portfolio </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <div class="topnav">
+            <a href="#home" class="active">Logo</a>
+              <div id="myLinks">
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+                </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                      <i class="fa fa-bars"></i>
+                    </a>
+                  </div>
         <div>
             I am <%= person.firstName %> <%= person.lastName %>! 
         </div>
+        <script src="../index.js" charset="utf-8"></script>
     </body>
 </html>

@@ -8,6 +8,9 @@ const app = express();
 app.use(morgan('dev'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}))
+//these two are giving the server/ejs render access to the js/css files in these public/client folders
+app.use(express.static('public'))
+app.use(express.static('client'))
 //defining the route that will be teh custom router
 app.use('/profile', profile)
 
@@ -36,6 +39,8 @@ app.get('/contact', (req, res) => {
 app.post('/thanks', (req, res) => {
     res.render('thanks', {contact: req.body})
 })
+
+
 
 app.listen(8080, () => {
     console.log('listening at http://localhost:8080 brosef, come check it out.')

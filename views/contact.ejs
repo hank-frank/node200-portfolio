@@ -4,7 +4,7 @@
   </head>
   <body>
     <div>
-      <form action="/thanks" method="POST">
+      <form action="/thanks" method="POST" name="submit-to-google-sheet">
         <label for="firstName">First Name:</label>
         <input id="firstName" name="firstName" type="text">
 
@@ -12,10 +12,21 @@
         <input id="lastName" name="lastName" type="text">
 
         <label for="email">Email:</label>
-        <input id="email" name="email" type="text">
+        <input id="email" name="email" type="email" placeholder="Email">
 
         <input type="submit" />
       </form>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxPv0uy2yb0JwJPZ51G5ETPrjFPt6DYzPT5UAA0dsfgpBWaPoA/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
     </div>
   </body>
 </html>
