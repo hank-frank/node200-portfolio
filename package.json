@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test/*.spec.js --exit",
-    "sass": "sass style.scss:style.css",
-    "start": "sass public/style.scss:public/style.css && node server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
