@@ -2,10 +2,10 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const axios = require('axios');
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
 var profile = require('./profile');
 
-dotenv.config();
+// dotenv.config();
 
 const app = express(); 
 
