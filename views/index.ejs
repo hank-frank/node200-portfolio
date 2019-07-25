@@ -12,11 +12,11 @@
     <body>
         <div class="topnav">
                 <!-- <a id="nameIcon">H</a> -->
-            <a href="#home" class="active" id="nameIcon">H</a>
+            <a href="#" class="active" id="nameIcon">H</a>
               <div id="myLinks">
                 <a href="#news">Projects</a>
-                <a class="nav-link" href="/contact">Contact</a>
-                <a href="#about">About</a>
+                <a class="#bottomInfo" href="#contact">Contact</a>
+                <a href="/about">About</a>
                 <p id="navContact">Henry Frank<br>henryfrank@gmail.com<br>
                 </div>
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -31,71 +31,74 @@
         <div class="projects">
             <div class="eachProject">
                 <div class="projectIcon">
-                    <p class="projectText" onclick="mortgageProjectToggle()">Mortgage Calculator</p>
+                    <p class="projectText" onclick=<%= projectData1.onClickFunction %>><%= projectData1.title %></p>
                 </div>
             </div>
             <div class="eachProject">
                     <div class="projectIcon">
-                        <p class="projectText" onclick="changeProjectToggle()">Change Calcualtor</p>
+                        <p class="projectText" onclick=<%= projectData2.onClickFunction %>><%= projectData2.title %></p>
                     </div>
             </div>
             <div class="eachProject">
                     <div class="projectIcon">
-                        <p class="projectText" onclick="flightProjectToggle()">Flight <br>Search</p>
+                        <p class="projectText" onclick=<%= projectData3.onClickFunction %>><%= projectData3.title %></p>
                     </div>
             </div>
             <div class="eachProject">
                     <div class="projectIcon">
-                        <p class="projectText" onclick="todoProjectToggle()">To Do <br>Tracker</p>
+                        <p class="projectText" onclick=<%= projectData4.onClickFunction %>><%= projectData4.title %></p>
                     </div>
             </div>
             <div class="eachProject">
                 <div class="projectIcon">
-                        <p class="projectText" onclick="topProjectToggle()">San Diego's Top Spots</p>
+                        <p class="projectText" onclick=<%= projectData5.onClickFunction %>><%= projectData5.title %></p>
                 </div>
         </div>
         <div class="projectView" id="mortgageProjectToggle">
             <div class="centering">
-            <h1 id="projectTitle">Mortgage Calculator</h1>
-            <p class="projectDescription">This is a morgage calculator. It was built with Node, Express and React and styled with Bootstrap.</p>
-            <button class ="projectButton" href="https://hf-mortgage-calcualtor.herokuapp.com/">View project on Heroku</button>
+            <h1 id="projectTitle"><%= projectData1.title %></h1>
+            <p class="projectDescription">T<%= projectData1.description %></p>
+            <button class ="projectButton"><a href="<%= projectData1.herokuLink %>">View project on Heroku</a></button>
+            <button class ="projectButton"><a href="<%= projectData1.gitHubLink %>">View Github Repository</a></button>
             </div>
         </div>
         <div class="projectView" id="changeProjectToggle">
                 <div class="centering">
-                <h1 id="projectTitle">Change Calculator</h1>
-                <p class="projectDescription">This is a simple change calculator. It was built with Node, Express and React and styled with Bootstrap.</p>
-                <button class ="projectButton" href="https://classique-bastille-82710.herokuapp.com/">View project on Heroku</button>
+                <h1 id="projectTitle"><%= projectData2.title %></h1>
+                <p class="projectDescription"><%= projectData2.description %>.</p>
+                <button class ="projectButton"><a href="<%= projectData2.herokuLink %>">View project on Heroku</a></button>
+                <button class ="projectButton"><a href="<%= projectData2.gitHubLink %>">View Github Repository</a></button>
                 </div>
         </div>
         <div class="projectView" id="flightProjectToggle">
                 <div class="centering">
-                <h1 id="projectTitle">Flight Search</h1>
-                <p class="projectDescription">This is a flight and weather search. It is built for my use as a flight attandant when using non-revenue travel, <br>
-                    I don't want flight search info to include price or be limited by airline, only the full list of flights between two cities onany given day.<br> 
-                    This It was built with Node, Express and React and styled with Bootstrap.</p>
-                <button class ="projectButton" href="https://hf-mortgage-calcualtor.herokuapp.com/">View project on Heroku</button>
+                <h1 id="projectTitle"><%= projectData3.title %></h1>
+                <p class="projectDescription"><%= projectData3.description %></p>
+                <button class ="projectButton"><a href="<%= projectData3.herokuLink %>">View project on Heroku</a></button>
+                <button class ="projectButton"><a href="<%= projectData3.gitHubLink %>">View Github Repository</a></button>
                 </div>
         </div>
         <div class="projectView" id="todoProjectToggle">
                 <div class="centering">
-                <h1 id="projectTitle">To Do Tracker</h1>
-                <p class="projectDescription">This is a Very Simple To Do app. It takes in to do items and adds them to a list with different priorities. <br>They can be edited, marked as complete and deleted. It was built with Node, Express and React and styled with Bootstrap.</p>
-                <button class ="projectButton" href="hhttps://hf-reac100t-vstda.herokuapp.com/">View project on Heroku</button>
+                <h1 id="projectTitle"><%= projectData4.title %></h1>
+                <p class="projectDescription"><%= projectData4.description %></p>
+                <button class ="projectButton"><a href="<%= projectData4.herokuLink %>">View project on Heroku</a></button>
+                <button class ="projectButton"><a href="<%= projectData4.gitHubLink %>">View Github Repository</a></button>
                 </div>
         </div>
         <div class="projectView" id="topProjectToggle">
                 <div class="centering">
-                <h1 id="projectTitle">San Diego's Top Spots</h1>
-                <p class="projectDescription">This is a list of some of San Deigo's top 30 spots. It was built with Node, Express and React and styled with Bootstrap.</p>
-                <button class ="projectButton" href="https://hf-san-diego-top-spots.herokuapp.com/">View project on Heroku</button>
+                <h1 id="projectTitle"><%= projectData5.title %></h1>
+                <p class="projectDescription"><%= projectData5.description %></p>
+                <button class ="projectButton"><a href="<%= projectData5.herokuLink %>">View project on Heroku</a></button>
+                <button class ="projectButton"><a href="<%= projectData5.gitHubLink %>">View Github Repository</a></button>
                 </div>
         </div>
 
         <div id="contactView">
             <h2 id="contactHeadline">If you want to get in touch please leave me your info and I'll get back to you, </h2>
             <div class="forms">
-                <form action="/thanks" method="POST" name="submit-to-google-sheet">
+                <form action="/thanks" method="POST" name="test-form">
                   <label for="firstName">First Name:</label>
                   <input id="firstName" name="firstName" type="text">
           
@@ -104,10 +107,11 @@
           
                   <label for="email">Email:</label>
                   <input id="email" name="email" type="email" placeholder="Email">
-          
-                  <input type="submit" />
+        
+                  <!-- <button type="submit"><a href="/thanks">Submit</a></button> -->
+                  <input type="submit" value="Send" />
                 </form>
-                <script>
+                <!-- <script>
                   const scriptURL = 'https://script.google.com/macros/s/AKfycbxPv0uy2yb0JwJPZ51G5ETPrjFPt6DYzPT5UAA0dsfgpBWaPoA/exec'
                   const form = document.forms['submit-to-google-sheet']
                 
@@ -117,7 +121,7 @@
                       .then(response => console.log('Success!', response))
                       .catch(error => console.error('Error!', error.message))
                   })
-                </script>
+                </script> -->
             </div>
         </div>
 
@@ -128,8 +132,6 @@
             </a>
         </div>
         <!-- <div id="madeBy">Design & build by Henry Frank</div> -->
-        <!-- </div>
-            I am <%= person.firstName %> <%= person.lastName %>! 
         </div> -->
         <script src="../index.js" charset="utf-8"></script>
     </body>
