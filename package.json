@@ -2,10 +2,10 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "My personal portfolio",
-  "main": "index.js",
+  "main": "listener.js",
   "scripts": {
     "test": "mocha test/*.spec.js --exit",
-    "start": "node server.js"
+    "start": "node listener.js"
   },
   "repository": {
     "type": "git",

@@ -107,8 +107,8 @@ app.post('/thanks', (req, res) => {
     res.render('thanks', { contact });
   });
 
-app.listen(8080, () => {
-    console.log('listening at http://localhost:8080 brosef, come check it out.')
-});
+// app.listen(8080, () => {
+//     console.log('listening at http://localhost:8080 brosef, come check it out.')
+// });
 
-// module.exports = server;
+module.exports = app;
