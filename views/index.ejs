@@ -2,22 +2,135 @@
     <head>
         <title> Henry's Portfolio </title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400&display=swap" rel="stylesheet">
+
+
+
     </head>
     <body>
         <div class="topnav">
-            <a href="#home" class="active">Logo</a>
+                <!-- <a id="nameIcon">H</a> -->
+            <a href="#home" class="active" id="nameIcon">H</a>
               <div id="myLinks">
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
+                <a href="#news">Projects</a>
+                <a class="nav-link" href="/contact">Contact</a>
                 <a href="#about">About</a>
+                <p id="navContact">Henry Frank<br>henryfrank@gmail.com<br>
                 </div>
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                       <i class="fa fa-bars"></i>
                     </a>
-                  </div>
-        <div>
-            I am <%= person.firstName %> <%= person.lastName %>! 
         </div>
+        <div>
+        <div class="introText">
+                <img src="me-face.jpg" width="400px"></img>
+            <h1 id="nameText">Hello, I'm <span id="henry">Henry</span>. I'm a Fullstack Developer living in San Diego.</h1>
+        </div>
+        <div class="projects">
+            <div class="eachProject">
+                <div class="projectIcon">
+                    <p class="projectText" onclick="mortgageProjectToggle()">Mortgage Calculator</p>
+                </div>
+            </div>
+            <div class="eachProject">
+                    <div class="projectIcon">
+                        <p class="projectText" onclick="changeProjectToggle()">Change Calcualtor</p>
+                    </div>
+            </div>
+            <div class="eachProject">
+                    <div class="projectIcon">
+                        <p class="projectText" onclick="flightProjectToggle()">Flight <br>Search</p>
+                    </div>
+            </div>
+            <div class="eachProject">
+                    <div class="projectIcon">
+                        <p class="projectText" onclick="todoProjectToggle()">To Do <br>Tracker</p>
+                    </div>
+            </div>
+            <div class="eachProject">
+                <div class="projectIcon">
+                        <p class="projectText" onclick="topProjectToggle()">San Diego's Top Spots</p>
+                </div>
+        </div>
+        <div class="projectView" id="mortgageProjectToggle">
+            <div class="centering">
+            <h1 id="projectTitle">Mortgage Calculator</h1>
+            <p class="projectDescription">This is a morgage calculator. It was built with Node, Express and React and styled with Bootstrap.</p>
+            <button class ="projectButton" href="https://hf-mortgage-calcualtor.herokuapp.com/">View project on Heroku</button>
+            </div>
+        </div>
+        <div class="projectView" id="changeProjectToggle">
+                <div class="centering">
+                <h1 id="projectTitle">Change Calculator</h1>
+                <p class="projectDescription">This is a simple change calculator. It was built with Node, Express and React and styled with Bootstrap.</p>
+                <button class ="projectButton" href="https://classique-bastille-82710.herokuapp.com/">View project on Heroku</button>
+                </div>
+        </div>
+        <div class="projectView" id="flightProjectToggle">
+                <div class="centering">
+                <h1 id="projectTitle">Flight Search</h1>
+                <p class="projectDescription">This is a flight and weather search. It is built for my use as a flight attandant when using non-revenue travel, <br>
+                    I don't want flight search info to include price or be limited by airline, only the full list of flights between two cities onany given day.<br> 
+                    This It was built with Node, Express and React and styled with Bootstrap.</p>
+                <button class ="projectButton" href="https://hf-mortgage-calcualtor.herokuapp.com/">View project on Heroku</button>
+                </div>
+        </div>
+        <div class="projectView" id="todoProjectToggle">
+                <div class="centering">
+                <h1 id="projectTitle">To Do Tracker</h1>
+                <p class="projectDescription">This is a Very Simple To Do app. It takes in to do items and adds them to a list with different priorities. <br>They can be edited, marked as complete and deleted. It was built with Node, Express and React and styled with Bootstrap.</p>
+                <button class ="projectButton" href="hhttps://hf-reac100t-vstda.herokuapp.com/">View project on Heroku</button>
+                </div>
+        </div>
+        <div class="projectView" id="topProjectToggle">
+                <div class="centering">
+                <h1 id="projectTitle">San Diego's Top Spots</h1>
+                <p class="projectDescription">This is a list of some of San Deigo's top 30 spots. It was built with Node, Express and React and styled with Bootstrap.</p>
+                <button class ="projectButton" href="https://hf-san-diego-top-spots.herokuapp.com/">View project on Heroku</button>
+                </div>
+        </div>
+
+        <div id="contactView">
+            <h2 id="contactHeadline">If you want to get in touch please leave me your info and I'll get back to you, </h2>
+            <div class="forms">
+                <form action="/thanks" method="POST" name="submit-to-google-sheet">
+                  <label for="firstName">First Name:</label>
+                  <input id="firstName" name="firstName" type="text">
+          
+                  <label for="lastName">Last Name:</label>
+                  <input id="lastName" name="lastName" type="text">
+          
+                  <label for="email">Email:</label>
+                  <input id="email" name="email" type="email" placeholder="Email">
+          
+                  <input type="submit" />
+                </form>
+                <script>
+                  const scriptURL = 'https://script.google.com/macros/s/AKfycbxPv0uy2yb0JwJPZ51G5ETPrjFPt6DYzPT5UAA0dsfgpBWaPoA/exec'
+                  const form = document.forms['submit-to-google-sheet']
+                
+                  form.addEventListener('submit', e => {
+                    e.preventDefault()
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                      .then(response => console.log('Success!', response))
+                      .catch(error => console.error('Error!', error.message))
+                  })
+                </script>
+            </div>
+        </div>
+
+        <div class="bottomInfo">
+            <h3>If you want to contact me</h3>
+            <a id="contactButton" href="#" onclick="contactToggle()">
+                    Click here
+            </a>
+        </div>
+        <!-- <div id="madeBy">Design & build by Henry Frank</div> -->
+        <!-- </div>
+            I am <%= person.firstName %> <%= person.lastName %>! 
+        </div> -->
         <script src="../index.js" charset="utf-8"></script>
     </body>
 </html>

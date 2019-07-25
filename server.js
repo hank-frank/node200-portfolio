@@ -32,11 +32,11 @@ app.get('/', (req, res) => {
     res.render('index', data);
 });
 
-app.get('/contact', (req, res) => {
+app.get('/', (req, res) => {
     res.render('contact');
 });
 
-app.post('/thanks', (req, res) => {
+app.post('/', (req, res) => {
     res.render('thanks', {contact: req.body})
 })
 

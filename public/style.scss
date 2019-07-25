@@ -1,8 +1,9 @@
-$grey1: #29292D;
-$grey2: #47474A;
-$grey3: #A2A3A7;
+$blue1: rgb(62, 80, 95);
+$blue2: rgb(128, 151, 170);
+$grey1: #A2A3A7;
 $grey4: #E1E2E5;
 $red: #F04F23;
+$blue: #0b53be;
 $font1: 'Raleway', sans-serif;
 $font2: 'Roboto Slab', serif;
 
@@ -12,25 +13,27 @@ body {
     color: $grey4;
     margin: 0;
     background-color: white;
+    min-height: 800px;
 }
 
 .topnav {
     overflow: hidden;
-    background-color: $grey1;
+    background-color: $blue2;
     position: relative;
     font-family: $font1;
     font-size: 40px;
   }
 
   #nameIcon {
-    border: 2px solid $red;
-    background-color: $grey3;
-    color: $red; 
+    border: 2px solid $blue;
+    background-color: white;
+    color: $blue; 
     font-family: $font1;
     text-align: center;
+    vertical-align: middle;
     height: 20px;
     width: 20px;
-    font-size: 30px;
+    font-size: 20px;
     padding-bottom:10px;
   }
   
@@ -41,7 +44,7 @@ body {
   }
   
   .topnav a {
-    color: $red;
+    color: $blue;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 20px;
@@ -49,7 +52,7 @@ body {
   }
   
   .topnav a.icon {
-    background: $grey1;
+    background: $blue1;
     display: block;
     position: absolute;
     right: 0;
@@ -59,31 +62,40 @@ body {
   
   .topnav a:hover {
     background-color: #ddd;
-    color: $red;
+    color: $blue;
   }
   
   .active {
-    background-color: $grey3;
-    color: $red;
+    background-color: $grey1;
+    color: $blue;
   }
 
   #navContact {
-    color: $red;
+    color: $blue;
     font-family: $font2;
     font-size: 10px;
   }
 
   .introText {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     margin: auto;
     width: 80%;
     padding: 25px, 20px;
     font-family: $font1;
-    color: $grey1;
+    font-size: 35px; 
+    color: $blue1;
     text-align: center;
   }
 
+  img {
+    padding-top: 20px;
+  }
+
   #henry {
-    color: $red;
+    color: $blue;
   }
 
   .projects{
@@ -99,12 +111,13 @@ body {
     width: 160;
     height: 220;
     border-radius: 20px;
-    background-color: $grey2;
+    background-color: $blue2;
     margin: 80px 10px;
     // margin-bottom: 50px;
   }
 
   .projectIcon {
+    cursor: pointer;
     width: 95;
     height: 95;
     border-radius: 50%;
@@ -114,8 +127,8 @@ body {
   }
 
   .projectText {
-    font-family: $font1;
-    color: $red;
+    font-family: $font2;
+    color: $blue;
     font-size: 14px;
     text-align: center;
     padding-top: 30px;
@@ -123,9 +136,9 @@ body {
 
   .projectView {
     overflow: auto;
-    background-color: $grey2;
+    background-color: $blue2;
     display: none;
-    min-height: 400px;
+    min-height: 300px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -134,27 +147,40 @@ body {
   }
 
   #mortgageProjectToggle {
+    overflow: auto;
     display: none;
+    margin-top: 80px; 
+    vertical-align: middle;
   }
   #changeProjectToggle {
-    display: none;
+    overflow: auto;
+    display: none; 
+    vertical-align: middle;
   }
   #flightProjectToggle {
+    overflow: auto;
     display: none;
+    vertical-align: middle;
   }
   #todoProjectToggle {
+    overflow: auto;
     display: none;
+    vertical-align: middle;
   }
   #topProjectToggle {
+    overflow: auto;
     display: none;
+    vertical-align: middle;
   }
 
   .centering {
+    margin-top: 120px;
     overflow: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+    vertical-align: middle;
   }
 
   #projectTitle {
@@ -169,7 +195,7 @@ body {
     font-family: $font2;
     font-size: 14px;
     // position: relative;
-    margin-left: 8%;
+    margin-left: 4%;
     padding: auto;
     // padding-top: 50px;
   }
@@ -178,22 +204,70 @@ body {
     font-family: $font1;
     font-size: 14px;
     text-align: center;
-    color: $red;
+    color: $blue;
     background-color: white;
     // position: relative;
-    margin-left: 8%;
-    margin-top: auto;
+    margin-left: 4%;
+    // margin-top: auto;
     height: 60px;
     width: 150px;
     border-radius: 20px;
   }
 
   .bottomInfo {
+    overflow: auto; 
     background-color: $grey4;
-    color: $red;
+    color: $blue2;
     width: 100%;
+    height: 80px;
     font-family: $font1;
+    bottom: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
+  #contactView {
+    overflow: auto;
+    display: none;
+    background-color: $grey1;
+    width: 100%;
+    height: 200px;
+  }
 
+  #contactHeadline {
+    color: white;
+    text-align: center;
+    font-family: $font1;
+    padding: 20px;
+  }
 
+  #contactButton {
+    border: 3px solid $blue2;
+    border-radius: 10px;
+    margin: 10px;
+    width: 80px;
+    height: 30px;
+    background-color: $grey4;
+  }
+
+  .forms {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  input {
+    margin: 20px;
+  }
+
+  #madeBy {
+    text-align: center;
+    color: $grey1;
+    font-family: $font2;
+  }

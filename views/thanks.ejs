@@ -1,8 +1,25 @@
 <html>
   <head>
     <title>Henry Thanks You</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400&display=swap" rel="stylesheet">
   </head>
   <body>
+        <div class="topnav">
+                <!-- <a id="nameIcon">H</a> -->
+            <a href="#home" class="active" id="nameIcon">H</a>
+              <div id="myLinks">
+                <a href="#news">Projects</a>
+                <a class="nav-link" href="/contact">Contact</a>
+                <a href="#about">About</a>
+                <p id="navContact">Henry Frank<br>henryfrank@gmail.com<br>
+                </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                      <i class="fa fa-bars"></i>
+                    </a>
+        </div>
     <div>
       Thank you <%= contact.firstName %> <%= contact.lastName %>.
     </div>
